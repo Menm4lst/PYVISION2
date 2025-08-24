@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYR VISION | Videovigilancia Profesional</title>
+    <meta name="description" content="Servicios profesionales de videovigilancia, cámaras de seguridad y sistemas de alarma">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-900 text-white">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+
+                    <!-- Logo -->
+                    <div class="w-12 h-12">
+                        <img src="/images/logo.png" alt="PYR VISION Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-2xl font-bold text-blue-500">PYR VISION</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+                <button class="md:hidden menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu fixed inset-0 bg-black/95 backdrop-blur-lg z-40 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#inicio" class="mobile-link">Inicio</a>
+            <a href="#productos" class="mobile-link">Productos</a>
+            <a href="#nosotros" class="mobile-link">Nosotros</a>
+            <a href="#contacto" class="mobile-link">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-gray-900 z-0"></div>
+        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+            <source src="video/bg.mp4" type="video/mp4">
+        </video>
+        <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">PYR VISION</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300">Seguridad y Tranquilidad para tu Hogar o Negocio</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#servicios" class="btn-primary">Ver Servicios</a>
+                <a href="#contacto" class="btn-secondary">Solicitar Cotización</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-blue-500" data-aos="fade-up">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 p-8 border border-gray-700 h-full flex flex-col">
+                        <div class="text-4xl text-blue-500 mb-6">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Instalación de Cámaras de Seguridad</h3>
+                        <p class="text-gray-400 mb-8 flex-grow">Sistemas de videovigilancia profesional con cámaras HD/4K, visión nocturna y acceso remoto desde tu celular. Ideal para hogares y negocios.</p>
+                        <button onclick="consultarServicio('Instalación de Cámaras de Seguridad')" class="btn-secondary w-full mt-auto">
+                            Solicitar Información
+                        </button>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 p-8 border border-gray-700 h-full flex flex-col">
+                        <div class="text-4xl text-blue-500 mb-6">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Sistema de Alarmas</h3>
+                        <p class="text-gray-400 mb-8 flex-grow">Protección completa con monitoreo 24/7, sensores de movimiento, contactos magnéticos y sirenas. Notificaciones instantáneas en tu dispositivo.</p>
+                        <button onclick="consultarServicio('Sistema de Alarmas')" class="btn-secondary w-full mt-auto">
+                            Solicitar Información
+                        </button>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 p-8 border border-gray-700 h-full flex flex-col">
+                        <div class="text-4xl text-blue-500 mb-6">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Circuito Cerrado de TV</h3>
+                        <p class="text-gray-400 mb-8 flex-grow">CCTV con tecnología de última generación, grabación continua, detección de movimiento y almacenamiento seguro. Solución completa para tu seguridad.</p>
+                        <button onclick="consultarServicio('Circuito Cerrado de TV')" class="btn-secondary w-full mt-auto">
+                            Solicitar Información
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6 text-blue-500">Nuestra Historia</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto">En PYR VISION, llevamos más de una década innovando en el campo de la seguridad electrónica. Nuestra misión es simple: proporcionar tranquilidad a través de soluciones de seguridad confiables y tecnología de vanguardia.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="relative h-[500px] rounded-lg overflow-hidden group" data-aos="fade-right">
+                    <img src="/images/camara.jpg" alt="Nuestro equipo trabajando" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Equipo Certificado</h3>
+                        <p class="text-gray-300">Nuestros técnicos están certificados en las últimas tecnologías de seguridad</p>
+                    </div>
+                </div>
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-2xl text-blue-500"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Compromiso con la Seguridad</h3>
+                                <p class="text-gray-400">Utilizamos equipos de última generación y protocolos de seguridad avanzados para garantizar la protección de tu propiedad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-clock text-2xl text-blue-500"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Soporte 24/7</h3>
+                                <p class="text-gray-400">Nuestro equipo está disponible las 24 horas para atender cualquier emergencia o consulta técnica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-cogs text-2xl text-blue-500"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Mantenimiento Preventivo</h3>
+                                <p class="text-gray-400">Realizamos chequeos regulares para asegurar el funcionamiento óptimo de tus sistemas de seguridad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center" data-aos="fade-up">
+                <div class="bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">500+</div>
+                    <div class="text-gray-400">Instalaciones Exitosas</div>
+                </div>
+                <div class="bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">24/7</div>
+                    <div class="text-gray-400">Soporte Técnico</div>
+                </div>
+                <div class="bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">10+</div>
+                    <div class="text-gray-400">Años de Experiencia</div>
+                </div>
+                <div class="bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">100%</div>
+                    <div class="text-gray-400">Clientes Satisfechos</div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contacto" class="btn-primary inline-flex items-center gap-2">
+                    Solicitar Asesoría
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-blue-500" data-aos="fade-up">¿Por qué elegirnos?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Máxima Seguridad</h3>
+                    <p class="text-gray-400">Equipos de última generación y tecnología avanzada para tu protección</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Instalación Profesional</h3>
+                    <p class="text-gray-400">Personal capacitado y certificado para garantizar el mejor servicio</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Soporte 24/7</h3>
+                    <p class="text-gray-400">Asistencia técnica disponible todos los días del año</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-blue-500" data-aos="fade-up">Solicita una Cotización</h2>
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-lg" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 w-8"></i>
+                            <span>(123) 456-7890</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 w-8"></i>
+                            <span>info@pyrvision.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-500 w-8"></i>
+                            <span>Tu Ciudad, CP 12345</span>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-500 hover:text-blue-400">
+                                <i class="fab fa-facebook text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-400">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-400">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre</label>
+                                <input type="text" id="nombre" class="form-input" required>
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono</label>
+                                <input type="tel" id="telefono" class="form-input" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="servicio" class="block text-sm font-medium text-gray-300">Servicio de Interés</label>
+                            <select id="servicio" class="form-input" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="camaras">Cámaras de Seguridad</option>
+                                <option value="alarmas">Sistema de Alarmas</option>
+                                <option value="cctv">Circuito Cerrado de TV</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje</label>
+                            <textarea id="mensaje" rows="4" class="form-input" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Solicitar Cotización</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-500">PYR VISION</h3>
+                    <p class="text-gray-400">Tu seguridad es nuestra prioridad. Confía en expertos para proteger lo que más valoras.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-500">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500">Cámaras de Seguridad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500">Sistemas de Alarma</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500">CCTV</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-500">Mantenimiento</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-500">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">
+                            <i class="fas fa-phone mr-2 text-blue-500"></i>
+                            (123) 456-7890
+                        </li>
+                        <li class="text-gray-400">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                            info@pyrvision.com
+                        </li>
+                        <li class="text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>
+                            Tu Ciudad, CP 12345
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-500">Certificaciones</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-800 p-2 rounded-lg text-center">
+                            <i class="fas fa-certificate text-2xl text-blue-500 mb-2"></i>
+                            <p class="text-sm text-gray-400">ISO 9001</p>
+                        </div>
+                        <div class="bg-gray-800 p-2 rounded-lg text-center">
+                            <i class="fas fa-shield-alt text-2xl text-blue-500 mb-2"></i>
+                            <p class="text-sm text-gray-400">Seg. Cert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PYR VISION. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
